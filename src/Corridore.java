@@ -25,6 +25,11 @@ public class Corridore extends Thread{  //estendo la classe Thread
         for(int i = 0; i <= 100; i++){
             System.out.println(nome + " metri percorsi: " + i );
 
+            try{
+
+                Thread.sleep(100);  //  metodo sleep() che fa attendere un determinato valore di tempo passato nel metodo
+            }catch(Exception e){}
+
             if(i == 100){
                 System.out.println("il corridore " + nome + " e' arrivato");
             }
