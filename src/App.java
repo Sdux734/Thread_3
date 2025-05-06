@@ -15,8 +15,16 @@ public class App {
             lista[i] = new Corridore(nomi[i]);
             lista[i].start();
         }
-         
 
+        for(int i = 0; i < MAX; i++){
+            lista[i].join();    //metodo join() mette in pausa il thread su cui lo uso fino a che l'operazione in corso non ha finito
+        }
+
+        System.out.println("Gara finita");
+
+
+         
+        /* 
         //dichiaro i thread
 
         Corridore c1 = new Corridore("marco");
@@ -30,7 +38,7 @@ public class App {
         c2.start();
         c3.start();
         c4.start();
-
+        */
         }
      
     }
